@@ -13,11 +13,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 @RestController
 @RequestMapping("/api/accounts")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearerAuth")
 public class AccountController {
+
+//@RestController
+//@RequestMapping("/api/accounts")
+//@RequiredArgsConstructor
+//public class AccountController {
 
     private final AccountService accountService;
 
